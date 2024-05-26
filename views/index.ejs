@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>欢迎使用基于深度学习的图像检索系统</title>
+    <link rel="stylesheet" type="text/css" href="/style2.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>欢迎使用基于深度学习的图像检索系统</h1>
+        </header>
+        <div class="form-container">
+            <form id="uploadForm" enctype="multipart/form-data">
+                <label for="imageUpload" class="custom-file-upload">
+                    <input type="file" id="imageUpload" name="image" accept="image/*" required>
+                    选择图片
+                </label>
+                <div id="imagePreview"></div>
+                <button type="submit">上传图片</button>
+            </form>
+        </div>
+        <footer>
+            <p>18 组 唐健程：模型搭建与训练 何润泽：图片数据集爬取 王坚：前端可视化与模型部署</p>
+        </footer>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="/script.js"></script>
+</body>
+</html>

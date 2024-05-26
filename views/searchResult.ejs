@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>搜索结果</title>
+    <link rel="stylesheet" type="text/css" href="/styles.css">
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const results = JSON.parse(localStorage.getItem('results'));
+            const resultsDiv = document.getElementById('results');
+            results.forEach(function(result) {
+                const resultDiv = document.createElement('div');
+                resultDiv.classList.add('result');
+                resultDiv.innerHTML = `
+                    <div class="image-container">
+                        <img src="/img/${result.image_name}" alt="Result Image">
+                    </div>
+                    <p>置信度: ${result.confidence.toFixed(4)}</p>
+                `;
+                resultsDiv.appendChild(resultDiv);
+            });
+        });
+    </script>
+</head>
+<body>
+    <header>
+        <h1>搜索结果</h1>
+    </header>
+    <div id="results" class="results-container"></div>
+    <footer>
+        <p>18 组 唐健程：模型搭建与训练 何润泽：图片数据集爬取 王坚：前端可视化与模型部署</p>
+    </footer>
+</body>
+</html>
